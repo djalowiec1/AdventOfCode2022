@@ -1,4 +1,4 @@
-# day 1
+# part 2
 from os.path import dirname, join
 from array import *
 
@@ -12,12 +12,12 @@ currentMax = 0
 
 for line in file:
     if (line == '') :
+     myArray.append(currentMax)
      currentMax = 0
      continue
 
     currentMax = currentMax + int(line)
 
-    if (currentMax > finalMax ):
-        finalMax = currentMax
+myArray.sort(reverse=True)
 
-print(finalMax)
+print(myArray[0] +  myArray[1] +myArray[2])
