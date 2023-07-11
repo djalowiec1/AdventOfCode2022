@@ -16,13 +16,13 @@ def areContaining(firstSet, secondSet):
 def main(): 
     file = readFile()
     
-    totalAssignments = 0
+    totalContains = 0
     for line in file: 
         firstSet, secondSet = line.split(",")
 
         if areContaining(firstSet, secondSet) or areContaining(secondSet, firstSet):
-            totalAssignments = totalAssignments + 1
+            totalContains = totalContains + 1
 
-    return totalAssignments
+    return totalContains
 
 print(main())
